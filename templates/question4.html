@@ -1,0 +1,17 @@
+{%  include 'common.html' %}
+
+<form method="get" action="question9_execute" enctype="multipart/form-data">
+{#    <input type="file" name="file"><br>#}
+    description: <input type="text" name="description">
+    cname: <input type="text" name="cname">
+    <input type="submit">
+</form>
+
+{% if result %}
+{%for i in range(lent)%}
+    <img src="./static/{{ url[i] }}"  height="100" width="100">
+    <h3> {{year[i]}} </h3>
+    <h3> {{fname[i]}} </h3>
+    <h3> {{fdesc[i]}} </h3>
+{%endfor%}
+{% endif %}
